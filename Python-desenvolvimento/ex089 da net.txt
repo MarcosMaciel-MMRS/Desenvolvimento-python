@@ -1,0 +1,23 @@
+lista = list()
+while True:
+    nome = input("Nome: ").title()
+    nota1 = float(input("Nota 1: "))
+    nota2 = float(input("Nota 2: "))
+    media = (nota1 + nota2)/2
+    lista.append([nome, nota1, nota2, media])
+    prg = input("Você deseja continuar? [S/N]: ")
+    if prg in 'Nn':
+        break
+for c in lista:
+    print(f"Média aluno {c[0]}: {c[3]}.")
+while True:
+    prg = input("Você deseja ver a nota de um aluno individualmente? [S/N]: ")
+    if prg in 'Nn':
+        break
+    else:
+        nm = input("Digite o nome do aluno: ").title()
+        for c in lista:
+            if c[0] == nm:
+                print(f"Notas do aluno {c[0]}:")
+                print(f"NOTA 1: {c[1]:.2f}")
+                print(f"NOTA 2: {c[2]:.2f}")

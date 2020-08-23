@@ -1,0 +1,5 @@
+# um programa que calcula o preço do aluguel de um carro, recebendo os dias(R$60 por dia) e os km rodados(R$0,15 por km rodado)
+dias = int(input('Informe por quantos dias vc ficou com o carro: '))
+km = float(input('Informe quantos quilometros foram rodados: '))
+valor = (dias*60)+(km*0.15)
+print('Por {} dias e {}km rodados , vc deverá pagar RS${:.2f}'.format(dias, km, valor))
